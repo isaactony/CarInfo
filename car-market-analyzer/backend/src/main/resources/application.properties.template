@@ -1,0 +1,42 @@
+# Server Configuration
+server.port=8081
+server.servlet.context-path=/
+
+# Database Configuration
+# IMPORTANT: Replace these values with your own database credentials
+spring.datasource.url=jdbc:postgresql://localhost:5432/car_market_analyzer
+spring.datasource.username=YOUR_DATABASE_USERNAME
+spring.datasource.password=YOUR_DATABASE_PASSWORD
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+# Logging Configuration
+# Set to INFO or WARN for production
+logging.level.com.carmarket.analyzer=DEBUG
+logging.level.org.springframework.web=DEBUG
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+# Jackson Configuration
+spring.jackson.serialization.write-dates-as-timestamps=false
+spring.jackson.time-zone=UTC
+
+# CORS Configuration
+# Update these origins for your production domain
+spring.web.cors.allowed-origins=http://localhost:3000,http://localhost:8081
+spring.web.cors.allowed-methods=GET,POST,PUT,DELETE,OPTIONS
+spring.web.cors.allowed-headers=*
+
+# Actuator Configuration (for monitoring)
+management.endpoints.web.exposure.include=health,info,metrics
+management.endpoint.health.show-details=always
+
+# Security Configuration
+# For production, consider enabling CSRF and proper authentication
+# spring.security.csrf.enabled=true
+# spring.security.basic.enabled=true
