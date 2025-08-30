@@ -85,7 +85,7 @@ const CarDetailsPage = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600"></div>
       </div>
     );
   }
@@ -96,7 +96,7 @@ const CarDetailsPage = () => {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Car Not Found</h2>
           <p className="text-gray-600 mb-4">The car you're looking for doesn't exist.</p>
-          <Link to="/search" className="text-blue-600 hover:text-blue-700">
+          <Link to="/search" className="text-primary-600 hover:text-primary-700">
             Back to Search
           </Link>
         </div>
@@ -165,7 +165,7 @@ const CarDetailsPage = () => {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-4xl font-bold text-blue-600 mb-1">
+                  <div className="text-4xl font-bold text-primary-600 mb-1">
                     {formatPrice(car.price)}
                   </div>
                   <div className="text-sm text-gray-500">Current Market Price</div>
@@ -197,7 +197,7 @@ const CarDetailsPage = () => {
                 <div className="grid grid-cols-2 gap-2">
                   {car.features?.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2 text-gray-600">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -298,7 +298,7 @@ const CarDetailsPage = () => {
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Seller</h3>
               <div className="space-y-3">
-                <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+                <button className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2">
                   <Phone className="w-4 h-4" />
                   <span>Call Now</span>
                 </button>
@@ -323,7 +323,7 @@ const CarDetailsPage = () => {
                     <Link
                       key={relatedCar.id}
                       to={`/car/${relatedCar.id}`}
-                      className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all"
+                      className="block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all"
                     >
                       <div className="flex items-center justify-between">
                         <div>
@@ -333,9 +333,9 @@ const CarDetailsPage = () => {
                           <p className="text-sm text-gray-600">{relatedCar.year} • {relatedCar.location}</p>
                         </div>
                         <div className="text-right">
-                          <div className="font-semibold text-blue-600">
-                            {formatPrice(relatedCar.price)}
-                          </div>
+                                                  <div className="font-semibold text-primary-600">
+                          {formatPrice(relatedCar.price)}
+                        </div>
                         </div>
                       </div>
                     </Link>

@@ -27,10 +27,10 @@ const CarCard = ({ car }) => {
 
   const getFuelTypeColor = (fuelType) => {
     const colors = {
-      'Gasoline': 'bg-blue-100 text-blue-800',
+              'Gasoline': 'bg-primary-100 text-primary-800',
       'Diesel': 'bg-gray-100 text-gray-800',
       'Electric': 'bg-green-100 text-green-800',
-      'Hybrid': 'bg-purple-100 text-purple-800',
+              'Hybrid': 'bg-secondary-100 text-secondary-800',
       'Plug-in Hybrid': 'bg-indigo-100 text-indigo-800'
     };
     return colors[fuelType] || 'bg-gray-100 text-gray-800';
@@ -55,7 +55,7 @@ const CarCard = ({ car }) => {
       className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
     >
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
+              <div className="bg-gradient-to-r from-primary-600 to-secondary-600 p-4 text-white">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-xl font-bold">{car.make} {car.model}</h3>
           <div className="flex items-center space-x-1">
@@ -67,7 +67,7 @@ const CarCard = ({ car }) => {
             ))}
           </div>
         </div>
-        <div className="flex items-center space-x-4 text-blue-100 text-sm">
+        <div className="flex items-center space-x-4 text-primary-100 text-sm">
           <div className="flex items-center space-x-1">
             <Calendar className="w-4 h-4" />
             <span>{car.year}</span>
@@ -119,7 +119,7 @@ const CarCard = ({ car }) => {
         <div className="flex space-x-3">
           <Link
             to={`/car/${car.id}`}
-            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center"
+            className="flex-1 bg-primary-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-primary-700 transition-colors text-center"
           >
             View Details
           </Link>

@@ -35,10 +35,10 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2"
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
                 CarMarket
               </span>
             </motion.div>
@@ -54,8 +54,8 @@ const Navbar = () => {
                   to={item.path}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                     isActive(item.path)
-                      ? 'bg-blue-100 text-blue-700 font-medium'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                      ? 'bg-primary-100 text-primary-700 font-medium'
+                      : 'text-gray-600 hover:text-primary-600 hover:bg-primary-50'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -69,7 +69,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              className="p-2 rounded-lg text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -100,8 +100,8 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                       className={`flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 ${
                         isActive(item.path)
-                          ? 'bg-blue-100 text-blue-700 font-medium'
-                          : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                          ? 'bg-primary-100 text-primary-700 font-medium'
+                          : 'text-gray-600 hover:text-primary-600 hover:bg-primary-50'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
