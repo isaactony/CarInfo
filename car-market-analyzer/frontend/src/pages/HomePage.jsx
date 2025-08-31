@@ -20,13 +20,13 @@ const HomePage = () => {
       icon: Search,
       title: 'Smart Car Search',
       description: 'Find your perfect car with advanced filtering options including make, model, year, price range, and location.',
-      color: 'from-blue-500 to-blue-600'
+              color: 'from-primary-500 to-primary-600'
     },
     {
       icon: BarChart3,
       title: 'Market Analytics',
       description: 'Get comprehensive market insights with price trends, market analysis, and statistical data.',
-      color: 'from-purple-500 to-purple-600'
+              color: 'from-secondary-500 to-secondary-600'
     },
     {
       icon: TrendingUp,
@@ -64,7 +64,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-primary-600 via-secondary-600 to-primary-800 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
@@ -82,7 +82,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto"
           >
             Your comprehensive platform for car market intelligence. 
             Get insights into pricing trends, market analysis, and detailed vehicle specifications.
@@ -95,13 +95,13 @@ const HomePage = () => {
           >
             <Link
               to="/search"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Start Searching
             </Link>
             <Link
               to="/dashboard"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-600 transition-colors"
             >
               View Analytics
             </Link>
@@ -124,7 +124,7 @@ const HomePage = () => {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -179,7 +179,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -195,7 +195,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl text-blue-100 mb-8"
+            className="text-xl text-primary-100 mb-8"
           >
             Join thousands of users who are already making smarter car decisions with our platform.
           </motion.p>
@@ -208,13 +208,13 @@ const HomePage = () => {
           >
             <Link
               to="/search"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore Cars Now
             </Link>
             <Link
               to="/dashboard"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-600 transition-colors"
             >
               View Market Data
             </Link>
